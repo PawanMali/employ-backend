@@ -2,6 +2,8 @@
 
 <form action="/employee" method="POST" autocomplete="off">
     <input type="hidden" name="_id" value="{{employee._id}}">
+    <input type="hidden" name="_isActive" value="{{employee._isActive}}">
+
     <div class="form-group">
         <label>Full Name</label>
         <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{employee.fullName}}">
@@ -14,6 +16,14 @@
         <div class="text-danger">
             {{employee.emailError}}</div>
     </div>
+
+        <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password" value="{{employee.password}}">
+        <div class="text-danger">
+            {{employee.emailError}}</div>
+    </div>
+
     <div class="form-row">
         <div class="form-group col-md-6">
             <label>Mobile</label>
@@ -23,7 +33,22 @@
             <label>City</label>
             <input type="text" class="form-control" name="city" placeholder="City" value="{{employee.city}}">
         </div>
+    
+    
     </div>
+
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Date of Birth</label>
+            <input type="date" class="form-control" name="dob" placeholder="Date of Birth" value="{{employee.dob}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Gender</label>
+            <input type="text" class="form-control" name="gender" placeholder="gender" value="{{employee.gender}}">
+        </div>
+    </div>
+
+
     <div class="form-group">
         <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
         <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
