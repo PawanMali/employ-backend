@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 // For local db
 // mongoose.connect('mongodb://localhost:27017/EmployeeDB',
   
-mongoose.connect('mongodb://localhost:27017/EmployeeDB', { useNewUrlParser: true }, (err) => {
+mongoose.connect('mongodb+srv://pawan:testdb@clustercube0-kftti.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true }, (err) => {
     if (!err) { console.log('MongoDB Connection Succeeded.') }
     else { console.log('Error in DB connection : ' + err) }
 });
